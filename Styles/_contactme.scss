@@ -1,0 +1,131 @@
+.section5 {
+  opacity: 0;
+}
+.section5-visible {
+  opacity: 1;
+  transition-duration: 0.8s;
+}
+
+.section5-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  .socials {
+    p {
+      font-size: 1.9em;
+      color: #347592;
+    }
+    ul {
+      .independent-links {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin-bottom: 10px;
+        a {
+          color: black;
+          text-decoration: none;
+          margin-left: 20px;
+          transition-duration: 0.4s;
+
+          &:hover {
+            text-decoration: underline;
+            font-size: 18px;
+            color: #347592;
+            transition-duration: 0.4s;
+          }
+        }
+      }
+      .nested-link {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: 20px;
+        }
+      }
+      .insta-links {
+        display: flex;
+        flex-direction: column;
+        margin-left: 100px;
+        a {
+          color: black;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+            color: #347592;
+            text-underline-offset: 5px;
+            transition-duration: 0.4s;
+          }
+        }
+        .personal {
+          margin-left: 10px;
+          background-color: red;
+        }
+        .education {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .contacts {
+    p {
+      font-size: 1.9em;
+      color: #347592;
+    }
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        span {
+          margin-left: 20px;
+          font-size: 17px;
+        }
+      }
+      .nested-link {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .section5-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .socials {
+      ul {
+        .insta-links {
+          margin-bottom: 20px;
+          margin-left: 0;
+          text-align: center;
+          .personal {
+            margin-left: 0;
+          }
+          .education {
+            margin-left: 0;
+          }
+        }
+        .independent-links {
+          margin-bottom: 20px;
+        }
+        li {
+          justify-content: center;
+        }
+        .adjuster {
+          margin-left: -6px;
+        }
+      }
+    }
+    .contacts {
+      margin-top: 40px;
+      ul {
+        li {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

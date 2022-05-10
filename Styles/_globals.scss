@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import 'navbar';
+@import 'tabQuery';
+@import 'aboutme';
+@import 'mobile';
+@import 'sections';
+@import 'education';
+@import 'skills';
+@import 'portfolio';
+@import 'contactme';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+.demo {
+  display: none;
+}
+.star {
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+.star-visible {
+  transition-timing-function: linear;
+  transition-duration: 1s;
+  opacity: 1;
+}
+.name {
+  font-size: 0px;
+  text-align: center;
+  color: white;
+}
+.name-visible {
+  font-size: 4em;
+  transition-duration: 1s;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+.identity {
+  opacity: 0;
+  text-align: center;
+  color: white;
+}
+.identity-visible {
+  opacity: 1;
+  transition-duration: 0.7s;
+  border-top: 3px solid white;
+}
+.content-container {
+  color: white;
+}

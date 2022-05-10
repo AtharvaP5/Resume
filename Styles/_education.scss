@@ -1,0 +1,59 @@
+.education-tag {
+  @include h1Styles;
+}
+#education-section {
+  background-color: white;
+}
+.overall-education-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto 0 auto;
+  justify-content: start;
+  .per {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+    justify-content: space-around;
+    div {
+      h3 {
+        margin: 0 0 10px 0;
+      }
+      p {
+        color: gray;
+      }
+    }
+    .elongated {
+      max-width: 40%;
+      .location{
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline black;
+          text-underline-offset: 3px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .overall-education-container {
+    .per {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 1px solid black;
+      border-radius: 4px;
+      .school-university {
+        h3 {
+          border-bottom: 2px solid black;
+        }
+      }
+      .elongated {
+        min-width: 80%;
+      }
+    }
+  }
+}

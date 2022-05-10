@@ -1,0 +1,84 @@
+@import 'mixins';
+
+.section {
+  background-image: radial-gradient(rgb(211, 208, 208), white);
+  h1 {
+    @include h1Styles;
+  }
+}
+
+.grid-container__section1 {
+  display: grid;
+  grid-column-gap: 20px;
+  width: 70%;
+  grid-template-areas: 'details my-photo about-me';
+  margin: auto;
+  padding: 50px 0;
+  .details {
+    grid-area: details;
+
+    h2 {
+      margin: 0 0 20px 0;
+      background-color: white;
+      width: fit-content;
+      border-radius: 10px 0 10px 0;
+    }
+  }
+  .my-photo {
+    grid-area: my-photo;
+    img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .about-me {
+    grid-area: about-me;
+    h2 {
+      margin: 0 0 20px 0;
+      background-color: white;
+      width: fit-content;
+      border-radius: 10px 0 10px 0;
+    }
+  }
+}
+
+div {
+  h2 {
+    color: #347592;
+  }
+  p {
+    color: black;
+    margin-bottom: 6px;
+  }
+  label {
+    color: #347592;
+    font-weight: 900;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .grid-container__section1 {
+    align-items: center;
+    justify-items: center;
+    width: 90% !important;
+    grid-template-areas:
+      'details'
+      'my-photo'
+      'about-me';
+    grid-row-gap: 30px;
+    .about-me {
+      text-align: center;
+      h2 {
+        width: 100%;
+      }
+    }
+    .details {
+      text-align: center;
+      width: 100% !important;
+      h2 {
+        width: 100%;
+      }
+    }
+  }
+}

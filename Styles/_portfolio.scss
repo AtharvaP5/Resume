@@ -1,0 +1,171 @@
+@import 'mixins';
+
+#portfolio-section {
+  .portfolio-tag {
+    @include h1Styles;
+  }
+}
+.portfolio-flex{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  // background-color: red;
+}
+
+
+.portfolio-project__container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 40px 0;
+  // border-bottom: 3px solid black;
+  // border-bottom-height: 4px;
+  // background-color: blue;
+    .project-image{
+      width: 25%;
+      height: 34%;
+      // background-color: green;
+      position: relative;
+      &:hover{
+        .portfolio-tooltip{
+          opacity: 1;
+          transition-duration: 0.3s;
+        }
+      }
+      .left{
+        opacity: 0;
+        position: absolute;
+        right: -110%;
+        max-width: 100%;
+        top: -10%;
+        transition-duration: 0.3s;
+        .tooltip{
+          background-color: rgba(211, 208, 208, 0.7);  
+          border-radius: 5px;
+          text-align: center;
+        }
+        .cloud{
+          background-color:  rgba(211, 208, 208, 0.7);;
+         
+          border-radius: 50%;
+        }
+        .c1{
+          margin-left: -15px;
+          width: 40px;
+          height: 30px;
+          margin-top: 5px;
+        }
+        .c2{
+          margin-left: -25px;
+          width: 30px;
+          height: 25px;
+        }
+        .c3{
+          margin-left: -40px;
+          width: 20px;
+          height: 15px;
+        }
+
+      }
+      .right{
+        opacity: 0;
+        position: absolute;
+        right: 110%;
+        width: 100%;
+        top: -10%;
+        transition-duration: 0.3s;
+        .tooltip{
+          background-color: rgba(211, 208, 208, 0.7);  
+          border-radius: 5px;
+          text-align: center;
+        }
+        .cloud{
+          background-color:  rgba(211, 208, 208, 0.7);;
+         
+          border-radius: 50%;
+        }
+        .cloud-container{
+          // position: absolute;
+          right: 0;
+          background-color: red;
+        }
+        .c1{
+          margin-left: 300px;
+          width: 40px;
+          height: 30px;
+          margin-top: 5px;
+        }
+        .c2{
+          margin-left: 320px;
+          width: 30px;
+          height: 25px;
+        }
+        .c3{
+          margin-left: 340px;
+          width: 20px;
+          height: 15px;
+        }
+      }
+      .project1{
+        width: 100%;
+        height: 100%;
+      }
+     
+      // .flip{
+      //   order: 1;
+      // }
+    }
+    .links{
+      // background-color: blue;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+      a{
+        text-decoration: none;
+        color: black;
+        font-size: 2em;
+          &:hover{
+            text-decoration: underline;
+            text-underline-offset: 4px;
+          }
+        // background-color: red;
+      }
+    }
+    .links :last-child{
+      margin-top: 10px;
+    }
+}
+.op{
+  opacity: 1;
+}
+.reverse{
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 700px) {
+  .project-container {
+    width: 60% !important;
+  }
+  .portfolio-project__container .links a{
+    font-size: 1.3em;
+  }
+  .project-image .left {
+    display: none;
+  }
+  .project-image .right{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .project-links {
+    opacity: 1;
+    bottom: 0;
+  }
+  .portfolio-flex-container .project-container a {
+    color: gray;
+  }
+}

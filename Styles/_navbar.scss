@@ -1,0 +1,80 @@
+.nav-toggler {
+  font-size: 4em;
+  position: fixed;
+  top: 20%;
+  color: #347592;
+  animation-name: nav-looper;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+  transition-duration: 0.5s;
+  animation-direction: alternate-reverse;
+  opacity: 0;
+  z-index: 2;
+}
+.nav-toggler:hover {
+  cursor: pointer;
+}
+.nav-toggler-visible {
+  opacity: 1;
+}
+.toggler-color-changer {
+  color: gray;
+}
+
+.nav-rotator {
+  transform: rotateY(180deg);
+  transition-duration: 0.5s;
+  animation-direction: alternate;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(51, 51, 68, 0.623);
+  width: fit-content;
+  top: 30%;
+  border-radius: 20px 0 20px 0;
+  transform: translateX(-100%);
+  transition-duration: 0.5s;
+  z-index: 2;
+  scroll-behavior: smooth;
+}
+.nav-toggle {
+  transform: translateX(30%);
+  transition-duration: 0.5s;
+}
+.aboutme-list {
+  li {
+    list-style-type: none;
+    padding: 30px 15px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.burger {
+  display: none;
+}
+
+.list-highlight-trigger {
+  background-color: blue;
+  color: white;
+}
+
+@keyframes nav-looper {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 7px;
+  }
+  100% {
+    left: 0;
+  }
+}
